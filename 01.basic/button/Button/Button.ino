@@ -3,11 +3,11 @@ const int ledPin =  13;
 int buttonState = 0;
 void setup() {
   pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
 }
 void loop() {
   buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH) {
+  if (buttonState == LOW) {
     digitalWrite(ledPin, HIGH);
    } 
    else {
